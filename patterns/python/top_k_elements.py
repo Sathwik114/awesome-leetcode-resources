@@ -5,11 +5,11 @@ class TopKElements:
     
     # K Largest Elements using Sorting
     def k_largest_elements_sorting_approach(self, nums, k):
-        return sorted(nums, reverse=True)[:k]
+        return min(sorted(nums, reverse=True)[:k])
 
     # K Largest Elements using Max Heap
     def k_largest_elements_max_heap_approach(self, nums, k):
-        return heapq.nlargest(k, nums)
+        return min(heapq.nlargest(k, nums))
 
     # K Largest Elements using Min Heap
     def k_largest_elements_min_heap_approach(self, nums, k):
